@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>User Profiles</h1>
+        <input type="text" id="search" placeholder="Search...">
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Position</th>
+                    <th>Birthday</th>
+                    <th>Address</th>
+                    <th>Location</th>
+                    <th>Contact Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="addUser">Add User</button>
+        
+        <!-- Pagination controls -->
+        <div class="pagination">
+            <button id="prevPage">&laquo; Prev</button>
+            <span id="currentPage">1</span>
+            <button id="nextPage">Next &raquo;</button>
+        </div>
+    </div>
+
+    <!-- Modal for adding/editing users -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="userForm">
+                <input type="hidden" id="userId">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="number" id="age" placeholder="Age" required>
+                <input type="text" id="position" placeholder="Position" required>
+                <input type="date" id="birthday" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="text" id="location" placeholder="Location" required>
+                <input type="text" id="contactNumber" placeholder="Contact Number" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
