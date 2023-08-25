@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="dashboard">
         <h1>User Profiles</h1>
-        <input type="text" id="search" placeholder="Search...">
+        
+        <!-- Search Input for Filtering -->
+        <input type="text" id="search" placeholder="Search by Name...">
+        
+        <!-- User Table with Sorting Attributes -->
         <table id="userTable">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Position</th>
-                    <th>Birthday</th>
-                    <th>Address</th>
-                    <th>Location</th>
-                    <th>Contact Number</th>
+                    <th data-sort="name">Name</th>
+                    <th data-sort="age">Age</th>
+                    <th data-sort="position">Position</th>
+                    <th data-sort="birthday">Birthday</th>
+                    <th data-sort="address">Address</th>
+                    <th data-sort="location">Location</th>
+                    <th data-sort="contactNumber">Contact Number</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody></tbody>
         </table>
+        
+        <!-- Add User Button -->
         <button id="addUser">Add User</button>
         
         <!-- Pagination controls -->
@@ -53,7 +59,8 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
